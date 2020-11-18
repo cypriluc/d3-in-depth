@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>d3 selections</title>
+  </head>
+
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 14px;
+    }
+
+    circle {
+      fill: #ddd;
+    }
+
+    circle.selected {
+      stroke: #555;
+      stroke-width: 2px;
+    }
+
+    .purple {
+      fill: purple;
+    }
+  </style>
+
+  <body>
+
+    <div>
+      <div class="title"><h2>Original HTML Svg</h2></div>
+      <form>
+        <input class="robot-checkbox" type="checkbox"> A checkbox</input>
+      </form>
+      <svg width="760" height="140">
+        <g transform="translate(70, 70)">
+          <circle r="40" />
+          <circle r="40" cx="120" />
+          <circle r="40" cx="240" />
+          <circle r="40" cx="360" />
+          <circle r="40" cx="480" />
+        </g>
+      </svg>
+    </div>
+
+    <div class="select1">
+      <div class="title"><h2>Select and Modify All</h2></div>
+      <svg width="760" height="140">
+        <g transform="translate(70, 70)">
+          <circle r="40" />
+          <circle r="40" cx="120" />
+          <circle r="40" cx="240" />
+          <circle r="40" cx="360" />
+          <circle r="40" cx="480" />
+        </g>
+      </svg>
+    </div>
+
+    <div class="select2">
+      <div class="title"><h2></h2></div>
+      <form>
+        <input class="checkbox" type="checkbox"> A checkbox</input>
+      </form>
+      <svg width="760" height="140">
+        <g transform="translate(70, 70)">
+          <circle r="40" />
+          <circle r="40" cx="120" />
+          <circle r="40" cx="240" />
+          <circle r="40" cx="360" />
+          <circle r="40" cx="480" />
+        </g>
+      </svg>
+    </div>
+
+    <div class="select3">
+      <div class="title"><h2>Update with Functions</h2></div>
+      <button onclick="move()">Click to update circle's cx attribute using function(d, i)</button>
+      <svg width="760" height="140">
+        <g transform="translate(70, 70)">
+          <circle r="40" />
+          <circle r="40" cx="120" />
+          <circle r="40" cx="240" />
+          <circle r="40" cx="360" />
+          <circle r="40" cx="480" />
+        </g>
+      </svg>
+    </div>
+
+    <div class="select4">
+      <div class="title"><h2>Handle events</h2></div>
+      <p class="status">Click on a circle</p>
+      <svg width="760" height="140">
+        <g transform="translate(70, 70)">
+          <circle r="40" />
+          <circle r="40" cx="120" />
+          <circle r="40" cx="240" />
+          <circle r="40" cx="360" />
+          <circle r="40" cx="480" />
+        </g>
+      </svg>
+    </div>
+
+    <div class="select5">
+      <div class="title"><h2>Insert and remove elements</h2></div>
+      <button onclick="remove()">Remove circles</button>
+      <svg width="760" height="140">
+        <g transform="translate(70, 70)">
+          <g class="item" transform="translate(0, 0)">
+          <circle r="40" />
+          </g>
+          <g class="item" transform="translate(120, 0)">
+          <circle r="40" />
+          </g>
+          <g class="item" transform="translate(240, 0)">
+          <circle r="40" />
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <div class="select6">
+      <div class="title"><h2>Each</h2></div>
+      <svg width="760" height="140">
+        <g transform="translate(70, 70)">
+          <g class="item" transform="translate(0, 0)">
+          </g>
+          <g class="item" transform="translate(120, 0)">
+          </g>
+          <g class="item" transform="translate(240, 0)">
+          </g>
+          <g class="item" transform="translate(360, 0)">
+          </g>
+          <g class="item" transform="translate(480, 0)">
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <div class="select7">
+      <div class="title"><h2>Call</h2></div>
+      <svg width="760" height="140">
+        <g transform="translate(70, 70)">
+          <g class="item" transform="translate(0, 0)">
+          </g>
+          <g class="item" transform="translate(120, 0)">
+          </g>
+          <g class="item" transform="translate(240, 0)">
+          </g>
+          <g class="item" transform="translate(360, 0)">
+          </g>
+          <g class="item" transform="translate(480, 0)">
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js"></script>
+
+    
+    <script src="script.js"></script>
+    
+  </body>
+</html>
