@@ -85,5 +85,64 @@ function addNumberedCircleCall(selection) {
     .attr("y", 50)
     .attr("x", 30);
 }
-
 d3.select(".select7").selectAll("g.item").call(addNumberedCircleCall);
+
+// 08
+d3.select(".select8")
+  .selectAll("circle")
+  // .filter returns true if the element should be included
+  .filter(function (d, i) {
+    return i % 2 === 0;
+  })
+  .style("fill", "orange");
+
+// 09
+let myData = [
+  {
+    name: "Andy",
+    score: 37,
+  },
+  {
+    name: "Beth",
+    score: 39,
+  },
+  {
+    name: "Craig",
+    score: 31,
+  },
+  {
+    name: "Diane",
+    score: 35,
+  },
+  {
+    name: "Evelyn",
+    score: 38,
+  },
+];
+
+var barWidth = 400;
+var barScale = d3.scaleLinear().domain([0, 100]).range([0, barWidth]);
+
+var u = d3.select("#wrapper").selectAll(".person").data(myData);
+
+var entering = u.enter().append("div").classed("person", true);
+
+entering
+  .append("div")
+  .classed("label", true)
+  .text(function (d) {
+    return d.name;
+  });
+
+entering
+  .append("div")
+  .classed("bar", true)
+  .style("width", function (d) {
+    return barScale(d.score) + "px";
+  });
+
+function sort() {
+  d3.selectAll(".person").sort(function (a, b) {
+    return b.score - a.score;
+  });
+}

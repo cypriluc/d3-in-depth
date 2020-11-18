@@ -24,6 +24,27 @@
     .purple {
       fill: purple;
     }
+
+    .person {
+    height: 20px;
+    position: relative;
+  }
+  .person .label {
+    width: 90px;
+    text-align: right;
+  }
+  .person .bar {
+    height: 19px;
+    background-color: steelblue;
+    position: absolute;
+    left: 100px;
+  }
+  .person div {
+    display: inline-block;
+  }
+  .menu {
+    margin-top: 20px;
+  }
   </style>
 
   <body>
@@ -156,7 +177,7 @@
     </div>
 
     <div class="select8">
-      <div class="title"><h2>Filtering and sorting selections</h2></div>
+      <div class="title"><h2>Filtering selections</h2></div>
        <svg width="760" height="140">
          <g transform="translate(70, 70)">
             <circle r="40" />
@@ -168,9 +189,15 @@
         </svg>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js"></script>
+    <div class="select9">
+      <div class="title"><h2>Sorting selections</h2></div>
+      <div id="wrapper"></div>
+      <div class="menu">
+        <button onClick="sort();">Sort</button>
+      </div>
+    </div>
 
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js"></script>        
     <script src="script.js"></script>
     
   </body>
