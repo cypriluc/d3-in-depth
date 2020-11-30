@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>d3-enter&exit</title>
+    <style>
+      body {
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 14px;
+      }
+
+      circle {
+        fill: #ddd;
+      }
+
+      circle.selected {
+        stroke: #555;
+        stroke-width: 2px;
+      }
+      rect {
+        fill: steelblue;
+      }
+      rect:hover {
+        fill: orange;
+      }
+      text {
+        text-anchor: end;
+      }
+      .content div {
+        display: inline-block;
+        margin: 10px;
+        background-color: orange;
+        color: white;
+        padding: 30px;
+        width: 10px;
+        height: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>.enter</h2>
+    <div id="01" class="content">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div id="menu1">
+      <button onClick="doEnter()">Add elements using .enter and .append</button>
+    </div>
+
+    <h2>.enter & .append to empty selection</h2>
+    <div id="02" class="content"></div>
+    <div id="menu2">
+      <button onClick="doEnter2()">
+        Add elements using .enter and .append to empty selection
+      </button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
