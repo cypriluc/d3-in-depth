@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scales</title>
+  </head>
+
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 12px;
+      color: #333;
+    }
+    text {
+      fill: #555;
+      text-anchor: middle;
+    }
+    .inner3 circle {
+      fill: #888;
+    }
+    .inner text {
+      text-anchor: middle;
+    }
+  </style>
+
+  <body>
+    <div>
+      <h2>Scale example</h2>
+      <svg width="700" height="40">
+        <g class="inner" transform="translate(40, 30)"></g>
+      </svg>
+    </div>
+
+    <div>
+      <h2>Linear scale</h2>
+      <svg width="700" height="80">
+        <g class="inner2" transform="translate(40, 40)"></g>
+      </svg>
+    </div>
+
+    <div>
+      <h2>Scale squared</h2>
+      <svg width="800" height="80">
+        <g class="inner3" transform="translate(40, 40)"></g>
+      </svg>
+    </div>
+
+    <div>
+      <h2>Scale logarithmic</h2>
+      <svg width="800" height="80">
+        <g class="inner4" transform="translate(40, 40)"></g>
+      </svg>
+    </div>
+
+    <div>
+      <h2>Scale time</h2>
+      <svg width="800" height="80">
+        <g class="inner5" transform="translate(40, 40)"></g>
+      </svg>
+    </div>
+
+    <div>
+      <h2>Scale sequential</h2>
+      <svg width="800" height="80">
+        <g class="inner6" transform="translate(40, 40)"></g>
+      </svg>
+    </div>
+
+    <div>
+      <h2>scaleSequential interpolator examples</h2>
+      <svg width="800" height="580">
+        <g class="inner7" transform="translate(40, 40)"></g>
+      </svg>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
