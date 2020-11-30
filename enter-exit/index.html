@@ -27,6 +27,9 @@
       text {
         text-anchor: end;
       }
+      .menu {
+        margin: 10px;
+      }
       .content div {
         display: inline-block;
         margin: 10px;
@@ -37,26 +40,86 @@
         height: 10px;
         text-align: center;
       }
+      .content div.new {
+        background-color: purple;
+      }
     </style>
   </head>
 
   <body>
     <h2>.enter</h2>
-    <div id="01" class="content">
+    <div id="content-1" class="content">
       <div></div>
       <div></div>
       <div></div>
     </div>
-    <div id="menu1">
+    <div class="menu">
       <button onClick="doEnter()">Add elements using .enter and .append</button>
     </div>
 
     <h2>.enter & .append to empty selection</h2>
-    <div id="02" class="content"></div>
-    <div id="menu2">
+    <div id="content-2" class="content"></div>
+    <div class="menu">
       <button onClick="doEnter2()">
         Add elements using .enter and .append to empty selection
       </button>
+    </div>
+
+    <h2>.exit & .remove</h2>
+    <div id="content-3" class="content">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="menu">
+      <button onClick="doExit1()">
+        Remove elements using .exit and .remove
+      </button>
+    </div>
+
+    <h2>update</h2>
+    <div id="content-4" class="content">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="menu">
+      <button onClick="updateExisting()">Update existing elements</button>
+    </div>
+
+    <div id="content-5" class="content">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="menu">
+      <button onClick="updateEntering()">Update entering elements</button>
+    </div>
+
+    <div id="content-6" class="content">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="menu">
+      <button onClick="updateBoth()">Update all</button>
+    </div>
+
+    <h2>general update pattern</h2>
+    <div id="content-7" class="content"></div>
+    <div class="menu">
+      <button onClick="updateGeneral()">Update whenever data is changed</button>
+    </div>
+
+    <div id="content-8" class="content"></div>
+    <div class="menu">
+      <button onClick="updateDataColor()">Color entering elements</button>
+    </div>
+
+    <h2>data join key function</h2>
+    <div id="content-9" class="content"></div>
+    <div class="menu">
+      <button onClick="insert()">Insert element</button>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js"></script>
