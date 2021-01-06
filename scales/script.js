@@ -172,3 +172,23 @@ d3.select(".inner7")
     return "translate(0, " + i * 70 + ")";
   })
   .each(dots);
+
+// 08
+var data8 = [-10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10];
+let linearScale8 = d3
+  .scaleLinear()
+  .domain([-10, 0, 10])
+  .range(["red", "#ddd", "blue"]);
+
+d3.select(".inner8")
+  .selectAll("circle")
+  .data(data8)
+  .enter()
+  .append("circle")
+  .attr("r", 20)
+  .attr("cx", function (d, i) {
+    return i * 60;
+  })
+  .attr("fill", function (d) {
+    return linearScale8(d);
+  });
