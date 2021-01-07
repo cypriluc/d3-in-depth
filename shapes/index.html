@@ -9,7 +9,7 @@
   <style>
     path {
       fill: none;
-      stroke: rgb(51, 117, 13);
+      stroke: green;
       stroke-width: 2px;
     }
     svg {
@@ -17,7 +17,7 @@
     }
     circle {
       fill: none;
-      stroke: rgb(51, 117, 13);
+      stroke: green;
       stroke-width: 2px;
     }
   </style>
@@ -25,7 +25,7 @@
   <body>
     <!--   example 1 -->
     <div>
-      <h2>Line generator</h2>
+      <h2>line generator</h2>
       <svg width="700" height="120">
         <path class="line1"></path>
       </svg>
@@ -80,8 +80,56 @@
     <!--   example 8 -->
     <div>
       <h2>area generator</h2>
+      <svg width="700" height="150">
+        <g class="area"></g>
+      </svg>
+    </div>
+
+    <!--   example 9 -->
+    <div>
+      <h2>area configure baseline</h2>
+      <svg width="700" height="150">
+        <g class="area2"></g>
+      </svg>
+    </div>
+
+    <!--   example 10 -->
+    <div>
+      <h2>area accessor</h2>
       <svg width="700" height="200">
-        <g class="radial2" transform="translate(100,100)"></g>
+        <g class="area3"></g>
+      </svg>
+    </div>
+
+    <!--   example 11 -->
+    <div>
+      <h2>radial area</h2>
+      <svg width="700" height="200">
+        <g class="area4" transform="translate(100,100)"></g>
+      </svg>
+    </div>
+
+    <!--   example 12 -->
+    <div>
+      <h2>stack generator</h2>
+      <svg width="700" height="100">
+        <g class="stack"></g>
+      </svg>
+    </div>
+
+    <!--   example 13 -->
+    <div>
+      <h2>stacked charts with area generator</h2>
+      <svg width="700" height="200">
+        <g class="stack2"></g>
+      </svg>
+    </div>
+
+    <!--   example 14 -->
+    <div>
+      <h2>.order() of stacked series</h2>
+      <svg width="700" height="200">
+        <g class="stack2"></g>
       </svg>
     </div>
 
