@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shapes</title>
+  </head>
+
+  <style>
+    path {
+      fill: none;
+      stroke: rgb(51, 117, 13);
+      stroke-width: 2px;
+    }
+    svg {
+      background-color: rgba(240, 240, 240, 0.5);
+    }
+    circle {
+      fill: none;
+      stroke: rgb(51, 117, 13);
+      stroke-width: 2px;
+    }
+  </style>
+
+  <body>
+    <!--   example 1 -->
+    <div>
+      <h2>Line generator</h2>
+      <svg width="700" height="120">
+        <path class="line1"></path>
+      </svg>
+    </div>
+
+    <!--   example 2 -->
+    <div>
+      <h2>.x() and .y() accessor functions</h2>
+      <svg width="700" height="120">
+        <g class="line2" transform="translate(20, 0)"></g>
+      </svg>
+    </div>
+
+    <!--   example 3 -->
+    <div>
+      <h2>.defined()</h2>
+      <svg width="700" height="120">
+        <g class="line3" transform="translate(20, 0)"></g>
+      </svg>
+    </div>
+
+    <!--   example 4 -->
+    <div>
+      <h2>.curve()</h2>
+      <svg width="700" height="120">
+        <g class="curve" transform="translate(20, 0)"></g>
+      </svg>
+    </div>
+
+    <!--   example 5 -->
+    <div>
+      <h2>render to canvas</h2>
+      <canvas width="600" height="150"></canvas>
+    </div>
+
+    <!--   example 6 -->
+    <div>
+      <h2>radials line generator</h2>
+      <svg width="700" height="200">
+        <g class="radial" transform="translate(100,100)"></g>
+      </svg>
+    </div>
+
+    <!--   example 7 -->
+    <div>
+      <h2>.angle() and .radius()</h2>
+      <svg width="700" height="200">
+        <g class="radial2" transform="translate(100,100)"></g>
+      </svg>
+    </div>
+
+    <!--   example 8 -->
+    <div>
+      <h2>area generator</h2>
+      <svg width="700" height="200">
+        <g class="radial2" transform="translate(100,100)"></g>
+      </svg>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
