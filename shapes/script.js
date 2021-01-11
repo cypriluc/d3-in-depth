@@ -230,7 +230,7 @@ g.selectAll("rect")
   })
   .attr("height", 19);
 
-// 12 stack charts with area generator
+// 13 stack charts with area generator
 const yScale12 = d3.scaleLinear().domain([0, 600]).range([200, 0]);
 
 const areaGenerator12 = d3
@@ -254,3 +254,72 @@ d3.select(".stack2")
   })
   .style("stroke", "none")
   .attr("d", areaGenerator12);
+
+// 14 stack generator with offset expand
+const yScale14 = d3.scaleLinear().domain([0, 1]).range([150, 0]);
+
+const areaGenerator14 = d3
+  .area()
+  .x(function (d, i) {
+    return i * 100;
+  })
+  .y0(function (d) {
+    return yScale14(d[0]);
+  })
+  .y1(function (d) {
+    return yScale14(d[1]);
+  });
+
+let stack14 = d3
+  .stack()
+  .keys(["apricots", "blueberries", "cherries"])
+  .offset(d3.stackOffsetExpand);
+
+let stackedSeries14 = stack14(data12);
+
+d3.select(".stack3")
+  .selectAll("path")
+  .data(stackedSeries14)
+  .enter()
+  .append("path")
+  .style("fill", function (d, i) {
+    return colors[i];
+  })
+  .style("stroke", "none")
+  .attr("d", areaGenerator14);
+
+// 15 arc generator
+const arcGenerator15 = d3.arc();
+const pathData15 = arcGenerator15({
+  startAngle: 0,
+  endAngle: 0.25 * Math.PI,
+  innerRadius: 50,
+  outerRadius: 100,
+});
+d3.select(".arc1").append("path").attr("d", pathData15).style("fill", "green");
+
+// 16 arc generator padding and radius
+const arcGenerator16 = d3
+  .arc()
+  .innerRadius(20)
+  .outerRadius(100)
+  .padAngle(0.02)
+  .padRadius(100)
+  .cornerRadius(4);
+
+let arcData16 = [
+  { startAngle: 0, endAngle: 0.2 },
+  { startAngle: 0.2, endAngle: 0.6 },
+  { startAngle: 0.6, endAngle: 1.4 },
+  { startAngle: 1.4, endAngle: 3 },
+  { startAngle: 3, endAngle: 2 * Math.PI },
+];
+
+d3.select(".arc2")
+  .selectAll("path")
+  .data(arcData16)
+  .enter()
+  .append("path")
+  .attr("d", arcGenerator16)
+  .style("stroke", "none")
+  .style("fill", "green");
